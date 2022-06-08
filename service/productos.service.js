@@ -30,7 +30,7 @@ class ProductosService {
   update(id,producto){
     const posicion = this.productos.findIndex(item =>item.id == id);
     if (posicion === -1) {
-      throw boom.notFound("Producto no encontra");
+      throw boom.notFound("Producto no encontrado");
     }
     this.productos[posicion] =producto;
     return this.productos[posicion];
